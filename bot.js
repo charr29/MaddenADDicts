@@ -23,7 +23,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/nt/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/FM/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   
@@ -31,38 +31,38 @@ function respond() {
   
   else if(request.text && botRegexSTP.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/player");
+    postMessage("http://daddyleagues.com/FM/stats/player");
     this.res.end();
   }  
   
   else if(request.text && botRegexSTT.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/team");
+    postMessage("http://daddyleagues.com/FM/stats/team");
     this.res.end();
   } 
   
     
   else if(request.text && botRegexRL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/rules");
+    postMessage("http://daddyleagues.com/FM/stats/rules");
     this.res.end();
   } 
     
   else if(request.text && botRegexRLS.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/rules");
+    postMessage("http://daddyleagues.com/FM/stats/rules");
     this.res.end();
   } 
     
   else if(request.text && botRegexSTD.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/standings");
+    postMessage("http://daddyleagues.com/FM/stats/standings");
     this.res.end();
   } 
     
  else if(request.text && botRegexRK.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/standings/rankings");
+    postMessage("http://daddyleagues.com/FM/stats/standings/rankings");
     this.res.end();
   } 
     
@@ -73,43 +73,43 @@ function respond() {
   } 
   else if(request.text && botRegexFA.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/players?name=&position=all&team=fa");
+    postMessage("http://daddyleagues.com/FM/players?name=&position=all&team=fa");
     this.res.end();
   } 
     
   else if(request.text && botRegexMRK.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/players?name=&position=all&team=all&rookie=1");
+    postMessage("http://daddyleagues.com/FM/players?name=&position=all&team=all&rookie=1");
     this.res.end();
   } 
     
   else if(request.text && botRegexTD.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/frontoffice/trade");
+    postMessage("http://daddyleagues.com/FM/frontoffice/trade");
     this.res.end();
   } 
     
   else if(request.text && botRegexSG.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/frontoffice/sign");
+    postMessage("http://daddyleagues.com/FM/frontoffice/sign");
     this.res.end();
   } 
     
   else if(request.text && botRegexRLP.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/frontoffice/release");
+    postMessage("http://daddyleagues.com/FM/frontoffice/release");
     this.res.end();
   } 
     
   else if(request.text && botRegexSG.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/frontoffice/salaries");
+    postMessage("http://daddyleagues.com/FM/frontoffice/salaries");
     this.res.end();
   } 
     
   else if(request.text && botRegexBRK.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/frontoffice/rosterbreakdown");
+    postMessage("http://daddyleagues.com/FM/frontoffice/rosterbreakdown");
     this.res.end();
   } 
     
@@ -156,7 +156,7 @@ function respond() {
   } 
    else if(request.text && botRegexGL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/schedules");
+    postMessage("http://daddyleagues.com/FM/schedules");
     this.res.end();
   } 
   else if(request.text && botRegexSS.test(request.text)) {
@@ -181,14 +181,14 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/nt/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/FM/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/nt/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/FM/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
