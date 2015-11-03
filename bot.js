@@ -63,7 +63,7 @@ function respond() {
     
  else if(request.text && botRegexRK.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/standings/rankings");
+    postMessage("http://daddyleagues.com/FM/standings/ranking");
     this.res.end();
   } 
     
