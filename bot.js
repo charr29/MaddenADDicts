@@ -13,7 +13,7 @@ function respond() {
       botRegexSTD = /^\/standings/;botRegexRK = /^\/rank/;botRegexCMD = /^\/command/; botRegexFA = /^\/free agents/;botRegexMRK = /^\/rookies/;
       botRegexTD = /^\/trade/; botRegexSG = /^\/sign/; botRegexRLP = /^\/release/;botRegexSLR = /^\/salary/;
       botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/; botRegexJC = /^\/geezus/;
-      botRegexDN = /^\/Deez Nuts/; 
+      botRegexDN = /^\/Deez Nuts/; botRegexADMIN = /^\/admin/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -33,6 +33,12 @@ function respond() {
   else if(request.text && botRegexSTP.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/FM/stats/player");
+    this.res.end();
+  }    
+  
+  else if(request.text && botRegexADMIN.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/FM/admin");
     this.res.end();
   }  
   
@@ -195,7 +201,7 @@ function respond() {
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
-    var req = request.text.substring(5,request.text.length);
+    var req = request.text.substring(6,request.text.length);
     var rep = req.replace(/ /,"+");
     postMessage("http://daddyleagues.com/FM/players?name="+rep+"&position=all&team=all");
     this.res.end();
