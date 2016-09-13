@@ -51,13 +51,13 @@ function respond() {
     
   else if(request.text && botRegexRL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/rules");
+    postMessage("https://docs.google.com/document/d/164Glji9SjDZKzhFhG8VKRNRJmt4aT0sfwc6-l7Y4XTY/edit";
     this.res.end();
   } 
     
   else if(request.text && botRegexRLS.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/rules");
+    postMessage("https://docs.google.com/document/d/164Glji9SjDZKzhFhG8VKRNRJmt4aT0sfwc6-l7Y4XTY/edit");
     this.res.end();
   } 
     
