@@ -1,4 +1,4 @@
-var HTTPS = require('https');
+ar HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
@@ -24,7 +24,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/MAddicts/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   
@@ -32,19 +32,19 @@ function respond() {
   
   else if(request.text && botRegexSTP.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/stats/player");
+    postMessage("http://daddyleagues.com/MAddicts/stats/player");
     this.res.end();
   }    
   
   else if(request.text && botRegexADMIN.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/admin");
+    postMessage("http://daddyleagues.com/MAddicts/admin");
     this.res.end();
   }  
   
   else if(request.text && botRegexSTT.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/stats/team");
+    postMessage("http://daddyleagues.com/MAddicts/stats/team");
     this.res.end();
   } 
   
@@ -57,19 +57,19 @@ function respond() {
     
   else if(request.text && botRegexRLS.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/164Glji9SjDZKzhFhG8VKRNRJmt4aT0sfwc6-l7Y4XTY/edit");
+postMessage("https://docs.google.com/document/d/1OFWYhpX5zhwYplSdpTyjMb9usOhC7qXvJ4rvrEiwnck/edit?usp=sharing");
     this.res.end();
   } 
     
   else if(request.text && botRegexSTD.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/standings");
+    postMessage("http://daddyleagues.com/MAddicts/standings");
     this.res.end();
   } 
     
  else if(request.text && botRegexRK.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/standing/ranking");
+    postMessage("http://daddyleagues.com/MAddicts/standing/ranking");
     this.res.end();
   } 
     
@@ -80,43 +80,43 @@ function respond() {
   } 
   else if(request.text && botRegexFA.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/players?name=&position=all&team=fa");
+    postMessage("http://daddyleagues.com/MAddicts/players?name=&position=all&team=fa");
     this.res.end();
   } 
     
   else if(request.text && botRegexMRK.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/players?name=&position=all&team=all&rookie=1");
+    postMessage("http://daddyleagues.com/MAddicts/players?name=&position=all&team=all&rookie=1");
     this.res.end();
   } 
     
   else if(request.text && botRegexTD.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/frontoffice/trade");
+    postMessage("http://daddyleagues.com/MAddicts/frontoffice/trade");
     this.res.end();
   } 
     
   else if(request.text && botRegexSG.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/frontoffice/sign");
+    postMessage("http://daddyleagues.com/MAddicts/frontoffice/sign");
     this.res.end();
   } 
     
   else if(request.text && botRegexRLP.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/frontoffice/release");
+    postMessage("http://daddyleagues.com/MAddicts/frontoffice/release");
     this.res.end();
   } 
     
   else if(request.text && botRegexSG.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/frontoffice/salaries");
+    postMessage("http://daddyleagues.com/MAddicts/frontoffice/salaries");
     this.res.end();
   } 
     
   else if(request.text && botRegexBRK.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/frontoffice/rosterbreakdown");
+    postMessage("http://daddyleagues.com/MAddicts/frontoffice/rosterbreakdown");
     this.res.end();
   } 
     
@@ -171,7 +171,7 @@ function respond() {
   } 
    else if(request.text && botRegexGL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/schedules");
+    postMessage("http://daddyleagues.com/MAddicts/schedules");
     this.res.end();
   } 
   else if(request.text && botRegexSS.test(request.text)) {
@@ -196,14 +196,14 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/FM/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/MAddicts/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(6,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/FM/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/MAddicts/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
